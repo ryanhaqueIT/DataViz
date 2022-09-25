@@ -1,6 +1,8 @@
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 150px;
-  }
+#choropleth_map {
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
