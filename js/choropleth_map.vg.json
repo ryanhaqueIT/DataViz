@@ -9,7 +9,7 @@
     }
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/master/FIT3137/js/ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/master/js/ne_110m_admin_0_countries.topojson",
     "format": {
       "type": "topojson",
       "feature": "custom.geo"
@@ -20,7 +20,7 @@
       "lookup": "properties.name",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/FIT3137/data/Country_CRI.csv"
+          "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/Country_CRI.csv"
         },
         "key": "country",
         "fields": ["Crimeindex"]
