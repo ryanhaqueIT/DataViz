@@ -1,12 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Crime Index Global",
-    "color": "white"
-  },
   "width": 750,
   "height": 300,
-  "background": "transparent",
+  "background": "skyblue",
   "config": {
     "view": {
       "stroke": "transparent"
@@ -42,12 +38,9 @@
     "color": {
       "field": "Crimeindex",
       "type": "quantitative",
-      "scale": { "scheme": "orangered", "reverse": false },"legend": {
-        "labelColor": "white",
-        "titleColor": "white"
-      },
-      "title": "Crime Index"
+      "scale":  { "scheme": "greens"}
     },
+    
     "tooltip": [
       { "field": "properties.name", "type": "nominal", "title": "Country" },
       {
