@@ -13,13 +13,53 @@
 
 </head>
 <body>
+  <div class="page">
+
+    <div>
+      <div>
+        <h1 class = "centre" style=font-size:60px>Australia's Crime Statistics </h1>
+        <p class = "centre"></p>
+      </div>
+    </div>
+
+    
   
-<div id="choropleth_map"></div>
+  <div>
+    <div>
+      <div id="choropleth_map" class=""></div>
+    <div>
+  <div>
+
+    
+  <div class=>
+      <div class>
+        <div class="description description-right">
+          <p class = "centre"> Compared to other Countries around the world, Australia is considered to be in the middle. <br> 
+
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <div>
+    <div>
+      <div id="vis3" class=""></div>
+    <div>
+  <div>
+
 
 <script type="text/javascript">
 
   var spec2 = "js/choropleth_map.vg.json";
+  var spec3= "js/aus_map.vg.json";
+
+
   vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+
+  vegaEmbed('#vis3', spec3, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
