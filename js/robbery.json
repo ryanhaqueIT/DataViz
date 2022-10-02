@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 200,
+    "background": "transparent",
+    "title": {"text": "Robberies amongst the different states"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/robberytotal.csv"
+    },
+    "mark": {
+      "type": "line"
+    },
+    "encoding": {
+      "x":{
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year",
+        "labelColor": "black",
+        "titleColor": "black",
+        "axis": {
+          "labelAngle": 90
+        }
+      },
+       "y": {
+         "field": "Robbery",
+         "type": "quantitative",
+         "title": "Robbery",
+         "axis": {
+        }
+         },
+          "tooltip": [
+            {"field": "Year", "type": "ordinal"},
+            {"field": "Robbery", "type": "quantitative", "format": ","}
+          ]
+  
+    }
+  }
+  
