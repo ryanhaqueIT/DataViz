@@ -1,38 +1,31 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
-    "height": 200,
-    "background": "transparent",
-    "title": {"text": "Robberies amongst the different states"},
-    "data": {
-      "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/robberytotal.csv"
-    },
-    "mark": {
-      "type": "line"
-    },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Robberies in Australia"},
+  "data": {
+    "url": "data/robberytotal.csv"
+  },
+  "repeat": {
+    "layer": ["Robbery"]
+  },
+  "spec": {
+    "mark": "line",
     "encoding": {
-      "x":{
+      "x": {
         "field": "Year",
         "type": "ordinal",
-        "title": "Year",
-        "labelColor": "black",
-        "titleColor": "black",
-        "axis": {
-          "labelAngle": 90
-        }
+        "title": "Year"
       },
-       "y": {
-         "field": "Robbery",
-         "type": "quantitative",
-         "title": "Robbery",
-         "axis": {
-        }
-         },
-          "tooltip": [
-            {"field": "Year", "type": "ordinal"},
-            {"field": "Robbery", "type": "quantitative", "format": ","}
-          ]
-  
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Total Robbery cases "
+      },
+      "color": {
+        "datum": {"repeat": "layer"},
+        "type": "nominal"
+      }
     }
   }
-  
+}
+
+
