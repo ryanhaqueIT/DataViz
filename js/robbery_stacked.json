@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/robberytotal.csv"
+    },
+    "repeat": {"layer": ["Robbery"]},
+    "spec": {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": {"repeat": "layer"},
+          "type": "quantitative",
+          "title": "Total Robbery count"
+        },
+        "color": {"datum": {"repeat": "layer"}, "title": "Gross"},
+        "xOffset": {"datum": {"repeat": "layer"}}
+      }
+    },
+    "config": {
+      "mark": {"invalid": null}
+    }
+  }
+  

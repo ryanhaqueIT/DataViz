@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+<body>
+  <div class="page">
+
+    <div>
+      <div>
+        <h1 class = "centre" style=font-size:60px>Australia's Crime Statistics </h1>
+        <p class = "centre"></p>
+      </div>
+    </div>
+
+    
+  
+  <div>
+    <div>
+      <div id="choropleth_map" class=""></div>
+    <div>
+  <div>
+
+    
+  <div class=>
+      <div class>
+        <div class="description description-right">
+          <p class = "centre"> Compared to other Countries around the world, Australia is considered to be in the middle. <br> 
+            <span>Australia has a crime rate index at 43.03 and is ranked 75th across the world </span><br>
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <div class = 'pure-g'>
+    <div>
+      <div id="vis3" class=""></div>
+    <div>
+  <div>
+
+  <div class = 'pure-g'>
+    <div class="pure-u-1-3">
+      <div id="vis7" class="vis-container"></div>
+    <div>
+  <div>
+
+  
+  <div>
+    <div>
+      <div id="vis5" class="vis-container"></div>
+    <div>
+  <div>
+
+    <div>
+      <div>
+        <div id="vis6" class="container"></div>
+      <div>
+    <div>
+
+<script type="text/javascript">
+
+  var spec2 = "js/choropleth_map.vg.json";
+  var spec3= "js/aus_map.vg.json";
+  var spec4= "js/robbery.json";
+  var spec5= "js/comparing_state_robbery.json";
+  var spec6= "js/comparing_state_sexassualt.json";
+  var spec7= "js/robbery_stacked.json";
+
+  vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', spec3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', spec4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis5', spec5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+
+  vegaEmbed('#vis6', spec6, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis7', spec7, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+</script>
+
+</body>
+</html>
