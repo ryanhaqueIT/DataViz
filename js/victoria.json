@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Victoria's worst 5 suburbs in terms of number of crime in 2022",
+    "width": 750,
+    "height": 300,
+    "data": {
+      "values": [
+        {"Suburb": "Myrtleford", "Crime": 140}, {"Suburb": "Mount Beauty", "Crime": 22},
+        {"Suburb": "Bright", "Crime": 90}, {"Suburb": "Harrietville", "Crime": 11},
+        {"Suburb": "Porepunk", "Crime": 40}
+      ]
+    },
+    "transform": [
+      {
+        "window": [{
+          "op": "rank",
+          "as": "rank"
+        }],
+        "sort": [{ "field": "Crime", "order": "descending" }]
+      }, {
+        "filter": "datum.rank <= 5"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+          "field": "Crime",
+          "type": "quantitative",
+          "title": "Total number of criminal cases"
+      },
+      "y": {
+          "field": "Suburb",
+          "type": "nominal",
+          "title": "Suburb names",
+          "sort": {"field": "Crime", "op": "average", "order":"descending"}
+      },
+      "color": {"field": "Suburb", "scale": {"scheme": "accent","reverse": false}
+      }
+    ,
+    "tooltip": [
+        {"field": "Suburb", "type": "ordinal"},
+        {"field": "Crime", "title": "Crime Cases", "type": "quantitative", "format": ","}
+      ]}
+
+  }
+  

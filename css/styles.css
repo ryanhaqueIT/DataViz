@@ -34,9 +34,6 @@ h1 {
     margin-bottom: 25px;
 }
 
-.vis-container {
-    width: 100%;
-}
 
 
 .description h2,
@@ -44,14 +41,54 @@ h1 {
     margin-top: 0px;
 }
 
-.description-right {
-    padding-left: 20px;
-}
 
-.description-left {
-    padding-right: 20px;
-}
 
 .vis-container {
     width: 100%;
 }
+
+.flexbox-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.flexbox-item {
+    /* width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf */
+}
+
+.flexbox-item-1 {
+    min-height: 100px;
+    align-self: centre;
+    flex-grow: 1;
+}
+
+.flexbox-item-2 {
+    min-height: 200px;
+    flex-grow: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 100px;
+}
+
+
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+

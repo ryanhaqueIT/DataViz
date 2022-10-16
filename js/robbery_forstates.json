@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "title": "Proportion of total robberies based on States",
+    "config": {
+    "view": {
+      "stroke": "transparent"
+    }},
+    "background": "transparent",
+    "description": "Robberies",
+    "data": {
+      "values": [
+        {"state": "ACT", "value": 289},
+        {"state": "NSW", "value": 2482},
+        {"state": "VIC", "value": 2720},
+        {"state": "QLD", "value": 2219},
+        {"state": "SA", "value": 457},
+        {"state": "WA", "value":1126},
+        {"state": "NT", "value": 152}
+      ]
+    },
+    "layer": [{
+      "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+    },
+    {
+      "mark": {"type": "text", "radiusOffset": 20},
+      "encoding": {
+        "text": {"field": "value", "type": "quantitative"}
+      }
+    }],
+    "encoding": {
+      "theta": {"field": "value", "type": "quantitative", "stack": true},
+      "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 90}},
+      "color": {"field": "state", "type": "nominal", "scale": {"scheme": "accent","reverse": false }}
+    }
+  }

@@ -1,12 +1,30 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "States current Robbery rates.",
-    "data": {"url": "data/comparing_state.csv"},
-    "mark": "line",
-    "encoding": {
-      "x": {"field": "Year", "type": "temporal"},
-      "y": {"field": "Sassault", "type": "quantitative"},
-      "color": {"field": "State", "type": "nominal"}
-    }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Total sexual assualt cases stacked based on States",
+  "width": 350,
+  "height": 200,
+  "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/comparing_state.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "Sassault",
+      "type": "quantitative",
+      "title": "Number of Sexual Assult cases"
+    },
+    "color": {"field": "State", "type": "nominal",
+    "scale": {"scheme": "accent","reverse": false }
+    },
+    "tooltip": [
+      {"field": "Sassault", "type": "quantitative"},
+      {"field": "Year", "type": "ordinal", "format": ",", "title": "Year"},
+      {"field": "State", "type": "nominal", "title": "State"}
+    ]
   }
-  
+}
