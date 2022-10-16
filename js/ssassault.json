@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Total Sexual Assualt cases in Australia",
+    "width": 350,
+    "height": 200,
+    "data": {
+      "url": "data/robberytotal.csv"
+    },
+    "mark": {
+      "type": "line",
+      "color": "green",
+      "point": {
+        "filled": false,
+        "fill": "white",
+        "color": "green"
+      }
+    },
+    "encoding": {
+      "x":{
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+       "y": {
+         "field": "SexAssult",
+         "type": "quantitative",
+         "title": "Number of Sexual Assault cases per 100,000",
+         "axis": {
+          "labelAngle": 0
+        }
+         },
+          "tooltip": [
+            {"field": "Year", "type": "ordinal"},
+            {"field": "SexAssult", "type": "quantitative", "format": ","}
+          ]
+  
+    }
+  }
+  
+  
+  
+  
