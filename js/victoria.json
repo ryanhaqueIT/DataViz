@@ -26,7 +26,7 @@
       "x": {
           "field": "Crime",
           "type": "quantitative",
-          "title": "Total number of criminal"
+          "title": "Total number of criminal cases"
       },
       "y": {
           "field": "Suburb",

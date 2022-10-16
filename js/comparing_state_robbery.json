@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "States current Robbery rates.",
-    "data": {"url": "data/comparing_state.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/comparing_state.csv"},
     "mark": "line",
     "encoding": {
       "x": {"field": "Year", "type": "temporal"},

@@ -5,7 +5,7 @@
   "height": 200,
   "background": "transparent",
   "data": {
-    "url": "data/comparing_state.csv"
+    "url": "https://raw.githubusercontent.com/ryanhaqueIT/DataViz/main/data/comparing_state.csv"
   },
   "mark": "bar",
   "encoding": {
